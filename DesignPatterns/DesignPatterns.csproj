@@ -42,28 +42,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behavioral\Abstract Factory\Client.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ConcreteFactory1.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ConcreteFactory2.cs" />
-    <Compile Include="Behavioral\Abstract Factory\IAbstractFactory.cs" />
-    <Compile Include="Behavioral\Abstract Factory\IAbstractProductA.cs" />
-    <Compile Include="Behavioral\Abstract Factory\IAbstractProductB.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ProductA1.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ProductA2.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ProductB1.cs" />
-    <Compile Include="Behavioral\Abstract Factory\ProductB2.cs" />
+    <Compile Include="Creational\Abstract Factory\Client.cs" />
+    <Compile Include="Creational\Abstract Factory\ConcreteFactory1.cs" />
+    <Compile Include="Creational\Abstract Factory\ConcreteFactory2.cs" />
+    <Compile Include="Creational\Abstract Factory\IAbstractFactory.cs" />
+    <Compile Include="Creational\Abstract Factory\IAbstractProductA.cs" />
+    <Compile Include="Creational\Abstract Factory\IAbstractProductB.cs" />
+    <Compile Include="Creational\Abstract Factory\ProductA1.cs" />
+    <Compile Include="Creational\Abstract Factory\ProductA2.cs" />
+    <Compile Include="Creational\Abstract Factory\ProductB1.cs" />
+    <Compile Include="Creational\Abstract Factory\ProductB2.cs" />
+    <Compile Include="Creational\Prototype\ConcretePrototype2.cs" />
+    <Compile Include="Creational\Prototype\ConcretePrototype1.cs" />
+    <Compile Include="Creational\Prototype\Prototype.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Behavioral\Abstract Factory\AbstractFactory.puml" />
+    <None Include="Creational\Abstract Factory\AbstractFactory.puml" />
+    <None Include="Creational\Prototype\Prototype.puml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Behavioral\Abstract Factory\Description.txt" />
+    <Content Include="Creational\Abstract Factory\Description.txt" />
+    <Content Include="Creational\Prototype\Description.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Creational\" />
+    <Folder Include="Behavioral\" />
     <Folder Include="Structural\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

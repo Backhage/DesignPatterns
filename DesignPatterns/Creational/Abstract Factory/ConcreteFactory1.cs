@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Behavioral.Abstract_Factory
+﻿namespace DesignPatterns.Creational.Abstract_Factory
 {
     class ConcreteFactory1 : IAbstractFactory
     {

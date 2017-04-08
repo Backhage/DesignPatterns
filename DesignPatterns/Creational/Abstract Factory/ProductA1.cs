@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns.Behavioral.Abstract_Factory
+namespace DesignPatterns.Creational.Abstract_Factory
 {
     class ProductA1 : IAbstractProductA
     {
