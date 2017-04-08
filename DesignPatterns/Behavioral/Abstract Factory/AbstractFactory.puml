@@ -1,0 +1,44 @@
+﻿@startuml
+
+interface IAbstractFactory {
+  +CreateProductA()
+  +CreateProductB()
+}
+class ConcreteFactory1 {
+  +CreateProductA()
+  +CreateProductB()
+}
+class ConcreteFactory2 {
+  +CreateProductA()
+  +CreateProductB()
+}
+
+IAbstractFactory <|-- ConcreteFactory1 
+IAbstractFactory <|-- ConcreteFactory2 
+
+interface IAbstractProductA
+class ProductA1
+class ProductA2
+
+IAbstractProductA <|-- ProductA1 
+IAbstractProductA <|-- ProductA2
+
+interface IAbstractProductB
+class ProductB1
+class ProductB2
+
+IAbstractProductB <|-- ProductB1
+IAbstractProductB <|-- ProductB2 
+
+ProductA1 <.. ConcreteFactory1 : <<instantiate>>
+ProductB1 <.. ConcreteFactory1 : <<instantiate>>
+
+ProductA2 <.. ConcreteFactory2 : <<instantiate>>
+ProductB2 <.. ConcreteFactory2 : <<instantiate>>
+
+class Client
+IAbstractFactory <.. Client : <<import>>
+IAbstractProductA <.. Client : <<import>>
+IAbstractProductB <.. Client : <<import>>
+
+@enduml

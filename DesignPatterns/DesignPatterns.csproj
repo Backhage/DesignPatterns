@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Behavioral\Abstract Factory\AbstractFactory.puml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Behavioral\Abstract Factory\Description.txt" />
