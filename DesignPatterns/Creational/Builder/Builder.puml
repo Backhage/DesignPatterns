@@ -1,0 +1,22 @@
+﻿@startuml
+
+class Director {
+ builder : IBuilder
+ +Construct()
+}
+
+interface IBuilder {
+ +BuildPart()
+}
+
+class ConcreteBuilder {
+ +BuildPart()
+}
+
+class Product
+
+Director *-- IBuilder
+IBuilder <|-- ConcreteBuilder
+Product <.. ConcreteBuilder : <<create>> 
+
+@enduml

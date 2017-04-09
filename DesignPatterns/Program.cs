@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Creational.Abstract_Factory;
+using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
 using System;
 
@@ -10,6 +11,7 @@ namespace DesignPatterns
         {
             // Creational Patterns
             DemonstrateAbstractFactory();
+            DemonstrateBuilder();
             DemonstratePrototype();
         }
 
@@ -26,6 +28,27 @@ namespace DesignPatterns
             client.VersionToCreate = Client.Version.Two;
             var productB = client.CreateProductB(); // Creates an instance of type ProductB2
             productB.PrintProductName();
+        }
+
+        private static void DemonstrateBuilder()
+        {
+            var builder = new ConcreteBuilder();
+
+            builder.SetAttributeA("Green");
+            builder.SetAttributeB(4);
+            builder.SetAttributeC(true);
+            var part1 = builder.BuildPart();
+
+            builder.SetAttributeA("Black");
+            builder.SetAttributeC(false);
+            var part2 = builder.BuildPart();
+
+            builder.SetAttributeB(2);
+            var part3 = builder.BuildPart();
+
+            Console.WriteLine($"Part 1: {part1.AttributeA}, {part1.AttributeB}, {part1.AttributeC}");
+            Console.WriteLine($"Part 2: {part2.AttributeA}, {part2.AttributeB}, {part2.AttributeC}");
+            Console.WriteLine($"Part 3: {part3.AttributeA}, {part3.AttributeB}, {part3.AttributeC}");
         }
 
         private static void DemonstratePrototype()
