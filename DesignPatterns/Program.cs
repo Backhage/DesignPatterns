@@ -2,6 +2,7 @@
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
 using System;
+using DesignPatterns.Structural.Decorator;
 
 namespace DesignPatterns
 {
@@ -13,6 +14,9 @@ namespace DesignPatterns
             DemonstrateAbstractFactory();
             DemonstrateBuilder();
             DemonstratePrototype();
+
+            // Structural Patterns
+            DemonstrateDecorator();
         }
 
         private static void DemonstrateAbstractFactory()
@@ -63,6 +67,25 @@ namespace DesignPatterns
 
             Console.WriteLine($"Clone of type: {c1.Id}"); // This will have Id "One"
             Console.WriteLine($"Clone of type: {c2.Id}"); // and this "Two"
+        }
+
+        private static void DemonstrateDecorator()
+        {
+            // First create a component that should be decorated
+            var component = new ConcreteComponent();
+
+            // Then create a decorator and supply the component to it, this expands the components functionality.
+            var decoratorA = new ConcreteDecoratorA(component);
+
+            // The pattern allows both adding the base component, or another decorator.
+            var decoratorB1 = new ConcreteDecoratorB(component);
+            var decoratorB2 = new ConcreteDecoratorB(decoratorA); // Expands the functionality even more.
+
+            component.Operation();
+            decoratorA.Operation();
+            decoratorB1.Operation();
+            decoratorB2.Operation();
+            decoratorB2.AddedBehavior();
         }
     }
 }

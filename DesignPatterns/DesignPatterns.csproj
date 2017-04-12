@@ -60,21 +60,27 @@
     <Compile Include="Creational\Prototype\Prototype.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Decorator\Component.cs" />
+    <Compile Include="Structural\Decorator\ConcreteComponent.cs" />
+    <Compile Include="Structural\Decorator\ConcreteDecoratorA.cs" />
+    <Compile Include="Structural\Decorator\ConcreteDecoratorB.cs" />
+    <Compile Include="Structural\Decorator\Decorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Creational\Abstract Factory\AbstractFactory.puml" />
     <None Include="Creational\Builder\Builder.puml" />
     <None Include="Creational\Prototype\Prototype.puml" />
+    <None Include="Structural\Decorator\Decorator.puml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Creational\Abstract Factory\Description.txt" />
     <Content Include="Creational\Builder\Description.txt" />
     <Content Include="Creational\Prototype\Description.txt" />
+    <Content Include="Structural\Decorator\Description.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Behavioral\" />
-    <Folder Include="Structural\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
