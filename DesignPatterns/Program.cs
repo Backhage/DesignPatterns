@@ -3,6 +3,7 @@ using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
 using System;
 using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Creational.Factory;
 
 namespace DesignPatterns
 {
@@ -11,12 +12,19 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
             // Creational Patterns
+            DemonstrateFactory();
             DemonstrateAbstractFactory();
             DemonstrateBuilder();
             DemonstratePrototype();
 
             // Structural Patterns
             DemonstrateDecorator();
+        }
+
+        private static void DemonstrateFactory()
+        {
+            var creator = new ConcreteCreator();
+            var product = creator.FactoryMethod();
         }
 
         private static void DemonstrateAbstractFactory()

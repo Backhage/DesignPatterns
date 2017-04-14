@@ -55,6 +55,10 @@
     <Compile Include="Creational\Builder\ConcreteBuilder.cs" />
     <Compile Include="Creational\Builder\IBuilder.cs" />
     <Compile Include="Creational\Builder\Part.cs" />
+    <Compile Include="Creational\Factory\ConcreteCreator.cs" />
+    <Compile Include="Creational\Factory\ConcreteProduct.cs" />
+    <Compile Include="Creational\Factory\Creator.cs" />
+    <Compile Include="Creational\Factory\Product.cs" />
     <Compile Include="Creational\Prototype\ConcretePrototype2.cs" />
     <Compile Include="Creational\Prototype\ConcretePrototype1.cs" />
     <Compile Include="Creational\Prototype\Prototype.cs" />
@@ -70,12 +74,14 @@
     <None Include="App.config" />
     <None Include="Creational\Abstract Factory\AbstractFactory.puml" />
     <None Include="Creational\Builder\Builder.puml" />
+    <None Include="Creational\Factory\Factory.puml" />
     <None Include="Creational\Prototype\Prototype.puml" />
     <None Include="Structural\Decorator\Decorator.puml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Creational\Abstract Factory\Description.txt" />
     <Content Include="Creational\Builder\Description.txt" />
+    <Content Include="Creational\Factory\Description.txt" />
     <Content Include="Creational\Prototype\Description.txt" />
     <Content Include="Structural\Decorator\Description.txt" />
   </ItemGroup>
