@@ -1,9 +1,9 @@
 ﻿using DesignPatterns.Creational.Abstract_Factory;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
-using System;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Creational.Factory;
+using System;
 
 namespace DesignPatterns
 {
@@ -25,6 +25,7 @@ namespace DesignPatterns
         {
             var creator = new ConcreteCreator();
             var product = creator.FactoryMethod();
+            Console.WriteLine($"Created {product}");
         }
 
         private static void DemonstrateAbstractFactory()
