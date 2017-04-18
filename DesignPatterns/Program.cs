@@ -5,6 +5,7 @@ using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Creational.Factory;
 using DesignPatterns.Behavioral.Iterator;
 using System;
+using DesignPatterns.Behavioral.Observer;
 
 namespace DesignPatterns
 {
@@ -14,6 +15,7 @@ namespace DesignPatterns
         {
             // Behavioral Patterns
             DemonstrateIterator();
+            DemonstrateObserver();
 
             // Creational Patterns
             DemonstrateFactory();
@@ -32,6 +34,23 @@ namespace DesignPatterns
             {
                 Console.WriteLine($"Iterable returned: {i}");
             }
+        }
+
+        private static void DemonstrateObserver()
+        {
+            var subject = new Subject();
+            var observerA = new ConcreteObserverA();
+            var observerB = new ConcreteObserverB();
+
+            observerA.Subscribe(subject);
+            observerB.Subscribe(subject);
+
+            subject.AddItem(2);
+            subject.AddItem(3);
+
+            observerA.Unsubscribe();
+            subject.AddItem(5);
+            observerB.Unsubscribe();
         }
 
         private static void DemonstrateFactory()

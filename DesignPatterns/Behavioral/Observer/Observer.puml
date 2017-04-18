@@ -1,0 +1,23 @@
+﻿@startuml
+abstract class Observer {
+ +Notify()
+}
+class ConcreteObserverA {
+ +Notify()
+}
+class ConcreteObserverB {
+ +Notify()
+}
+
+Observer <|-- ConcreteObserverA
+Observer <|-- ConcreteObserverB
+
+class Subject {
+ +observerCollection
+ +RegisterObserver(observer)
+ +UnregisterObserver(observer)
+ +NotifyObservers()
+}
+
+Subject *- Observer
+@enduml

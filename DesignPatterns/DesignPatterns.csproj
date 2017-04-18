@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behavioral\Iterator\Iterable.cs" />
+    <Compile Include="Behavioral\Observer\ConcreteObserverA.cs" />
+    <Compile Include="Behavioral\Observer\ConcreteObserverB.cs" />
+    <Compile Include="Behavioral\Observer\Observer.cs" />
+    <Compile Include="Behavioral\Observer\Subject.cs" />
     <Compile Include="Creational\Abstract Factory\Client.cs" />
     <Compile Include="Creational\Abstract Factory\ConcreteFactory1.cs" />
     <Compile Include="Creational\Abstract Factory\ConcreteFactory2.cs" />
@@ -73,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Behavioral\Observer\Observer.puml" />
     <None Include="Creational\Abstract Factory\AbstractFactory.puml" />
     <None Include="Creational\Builder\Builder.puml" />
     <None Include="Creational\Factory\Factory.puml" />
@@ -81,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Behavioral\Iterator\Description.txt" />
+    <Content Include="Behavioral\Observer\Description.txt" />
     <Content Include="Creational\Abstract Factory\Description.txt" />
     <Content Include="Creational\Builder\Description.txt" />
     <Content Include="Creational\Factory\Description.txt" />
