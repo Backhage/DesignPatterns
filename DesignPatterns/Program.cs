@@ -3,6 +3,7 @@ using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Creational.Factory;
+using DesignPatterns.Behavioral.Iterator;
 using System;
 
 namespace DesignPatterns
@@ -11,6 +12,9 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            // Behavioral Patterns
+            DemonstrateIterator();
+
             // Creational Patterns
             DemonstrateFactory();
             DemonstrateAbstractFactory();
@@ -19,6 +23,15 @@ namespace DesignPatterns
 
             // Structural Patterns
             DemonstrateDecorator();
+        }
+
+        private static void DemonstrateIterator()
+        {
+            var iterable = new Iterable();
+            foreach (var i in iterable)
+            {
+                Console.WriteLine($"Iterable returned: {i}");
+            }
         }
 
         private static void DemonstrateFactory()
